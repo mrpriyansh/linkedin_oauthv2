@@ -1,7 +1,7 @@
 runtime: nodejs10
 
 #service
-service: alumni-portal-frontend
+service: linkedin-oauth
 #handlers
 handlers:
   - url: /static/js/(.*)

@@ -1,0 +1,3 @@
+dispatch:
+  - url: linkedinoauthv2.gaharana.live/* # e.g. subdomain.example.com/*
+    service: linkedin-oauth
