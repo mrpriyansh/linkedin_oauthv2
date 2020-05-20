@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ReactComponent as LinkedinSVG } from './linkedin_white.svg';
 import './App.css';
+import config from './config';
 
 function App() {
   const [profile, setProfile ] =useState();
@@ -14,7 +15,7 @@ function App() {
         
     });
   const handleLoginButton=()=>{
-    const url='https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86sj8qwrm6zlvy&redirect_uri=http://localhost:4000/auth&state=bajrang&scope=r_liteprofile%20r_emailaddress%20w_member_social';
+    const url=`https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86sj8qwrm6zlvy&redirect_uri=${config.apiUrl}/auth&state=bajrang&scope=r_liteprofile%20r_emailaddress%20w_member_social`;
     var width = 400,
       height = 1000,
       left = window.screen.width / 2 - width / 2,
