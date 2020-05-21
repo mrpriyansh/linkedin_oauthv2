@@ -102,3 +102,8 @@
 .profile_pic{
   border-radius: 5px;
 }
+
+.no_image{
+  color: #fff;
+  font-weight: 600;
+}

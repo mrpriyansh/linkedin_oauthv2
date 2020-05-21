@@ -10,7 +10,7 @@ function App() {
       if(event.data && event.data.type==='profile'){
         console.log(event.data.profile)
         setProfile(event.data.profile);
-        console.log(event.data.profile.profilePicture['displayImage~'].elements[0].identifiers[0].identifier);
+        // console.log(event.data.profile.profilePicture['displayImage~'].elements[0].identifiers[0].identifier);
       }
         
     });
@@ -48,7 +48,7 @@ function App() {
        {profile && (
          <div className='profile_box'>
            <p className='name'>{profile.localizedFirstName} {profile.localizedLastName}</p>
-           <img className='profile_pic' src={profile.profilePicture['displayImage~'].elements[0].identifiers[0].identifier} alt='profile' />
+           {profile.profilePicture ? <img className='profile_pic' src={profile.profilePicture['displayImage~'].elements[0].identifiers[0].identifier} alt='profile' /> : <p className='no_image'>You don't have Profile Picture.</p>}
         </div>
        )}
     </div>
